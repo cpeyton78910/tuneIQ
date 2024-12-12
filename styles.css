@@ -81,3 +81,12 @@ footer {
 footer p {
   text-align: center;
 }
+
+@media screen and (max-width: 38rem) {
+  button {
+    width: 80%;
+  }
+  #questionContainer {
+    width: 90%;
+  }
+}
