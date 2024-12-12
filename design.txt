@@ -1,0 +1,329 @@
+Problem Statement:
+  A program is required that has a fun and silly IQ test that "measures" a user's intelligence through a series of wacky questions. The user gets two choices per question, and depending on their answer, the IQ score will either increase or decrease. After the IQ test, the user will input their favorite music genres. Then based off the user's results, a selection of music that they should enjoy will be displayed.
+
+Nouns and Verbs:
+  Nouns:
+    IQ
+    Genres
+    Intelligence Level
+    Music selection
+
+  Verbs:
+    Prompt
+    Calculate
+    Display
+
+Defining Diagram:
+  Inputs:
+    The user's answers to the questions
+    Genres the user enjoys
+
+  Processing
+    PROMPT for each IQ test questions
+    CALCULATE user IQ
+    PROMPT for genres
+    CALCULATE intelligenceLevel
+    CALCULATE music selection
+    DISPLAY IQ, genres and music selection
+
+  Outputs:
+    IQ
+    Genres
+    Music Selection
+
+Pseudocode:
+SOLUTION ALGORITHM:
+recommendMusic
+	questions = [
+		"Who would win: a sentient Flaming Hot Dorito, or a sentient Onion Ring?",
+		"If you could change one thing in history, what would it be and why?",
+		"If an animated movie about your life were made, who would voice you?", 
+		"If you could have any superpower, what would it be?",
+		"If you were the president of the United States for a day?", 
+		"What advice would you give your past yourself knowing what you know now?", 
+		"Yes or No?", 
+		"iurgh?vouidfhvohdfoih,hnxcjv", 
+		"If you won the lottery, what would you do with the money and why?", 
+		"If you could have any tattoo, what would it be and where would you put it?"
+	]
+
+  buttonOne = [
+    "Flaming Hot Dorito", 
+    "Perserve the suppior but extinct banana", 
+    "Chris Pratt", 
+    "When you scream, you become invisible", 
+    "Get rid of North Dakota", 
+    "Invest heavily in Enron", 
+    "Yes", 
+    "Option Uno", 
+    "Invest all your $ in Beanie Babies", 
+    "Ryan Reynolds - Stomach"
+  ]
+  buttonTwo = [
+    "Onion Ring", 
+    "Don't let sliced bread be invented", 
+    "Chris Pratt", 
+    "Every time you sneeze, a random person farts", 
+    "Declare war on New Jersey and France", 
+    "Drop out of school and join a circus, you’ll learn more valuable skills there.", 
+    "No", 
+    "Button", 
+    "Invest your $ in more Lottery Tickets for more $", 
+    "Ryan Reynolds - Face"
+  ]
+
+	buttonOneMin = [-15, 10, -5, 0, 0, -25, -15, -10, -15, 1]
+	buttonOneMax = [10, 30, 0, 20, 5, 0, 15, 10, 15, 5]
+	buttonTwoMin = [-10, -10, -5, -20, 0, 0, -15, -15, -20, 0]
+	buttonTwoMax = [15, 0, 0, 0, 5, 25, 15, 15, 15, 10]
+
+	FOR i from 0 to 9:
+    DISPLAY(questions[i])
+    DISPLAY(buttonOne[i])
+    DISPLAY(buttonTwo[i])
+    IF selected buttonOne = TRUE
+      iq += random(buttonOneMin[i], buttonOneMax[i])
+    ELSE
+      iq += random(buttonTwoMin[i], buttonTwoMax[i])
+    END IF
+  END FOR
+
+  iq = round(((((iq - randomNumber(-15.3, 38.4)) * 1.2) + 105.3) + iq + 80.3) / 2)
+
+  PROMPT genres
+
+  if iq >= 160:
+    intelligenceLevel = "Very Super Mega Big Brain"
+    IF rock = TRUE THEN
+      musicSelection += "Killing in the Name by Rage Against the Machine"
+      musicSelection += "Bohemian Rhapsody by Queen"
+      musicSelection += "Something in the Orange by Our Last Night"
+    END IF
+    IF pop = TRUE THEN
+      musicSelection += "mos thoser by food house, Gupi, Fraxiom"
+      musicSelection += "Billie Jean by Michael Jackson"
+    END IF
+    IF hip-hop = TRUE THEN
+      musicSelection += "Lost In The World by Kanye West, Pusha T"
+      musicSelection += "Blood On The Leaves by Kanye West"
+    END IF
+  else if iq >= 130:
+    intelligenceLevel = "Very Superior"
+    IF rock = TRUE THEN
+      musicSelection += "Hotel California by Eagles"
+      musicSelection += "Comfortably Numb by Pink Floyd"
+      musicSelection += "We Don't Talk About Bruno by Our Last Night"
+    END IF
+    IF pop = TRUE THEN
+      musicSelection += "That's What I Like by Bruno Mars"
+      musicSelection += "September by Earth, Wind & Fire"
+    END IF
+    IF hip-hop = TRUE THEN
+      musicSelection += "Lost In The World by Kanye West, Pusha T"
+      musicSelection += "Multiply by Xzibit, Nate Dogg"
+    END IF
+  else if iq >= 120:
+    intelligenceLevel = "Superior"
+    IF rock = TRUE THEN
+      musicSelection += "Sweet Child O’ Mine by Guns N’ Roses"
+      musicSelection += "Back in Black by AC/DC"
+      musicSelection += "White Room by Cream"
+    END IF
+    IF pop = TRUE THEN
+      musicSelection += "That's What I Like by Bruno Mars"
+      musicSelection += "September by Earth, Wind & Fire"
+    END IF
+    IF hip-hop = TRUE THEN
+      musicSelection += "Lost In The World by Kanye West, Pusha T"
+      musicSelection += "Multiply by Xzibit, Nate Dogg"
+    END IF
+  else if iq >= 110:
+    intelligenceLevel = "High Average"
+    IF rock = TRUE THEN
+      musicSelection += "Sunshine Of Your Love by Cream"
+      musicSelection += "Smooth by Santana, Rob Thomas"
+      musicSelection += "Aja by Steely Dan"
+    END IF
+    IF pop = TRUE THEN
+      musicSelection += "Blinding Lights by The Weeknd"
+      musicSelection += "Bad Guy by Billie Eilish"
+    END IF
+    IF hip-hop = TRUE THEN
+      musicSelection += "HUMBLE. by Kendrick Lamar"
+      musicSelection += "Redemption by Zacari, Babes Wodumo"
+    END IF
+  else if iq >= 90:
+    intelligenceLevel = "Average"
+    IF rock = TRUE THEN
+      musicSelection += "Wonderwall by Oasis"
+    END IF
+    IF pop = TRUE THEN
+      musicSelection += "Please Please Please by Sabrina Carpenter"
+      musicSelection += "Blinding Lights by The Weeknd"
+    END IF
+    IF hip-hop = TRUE THEN
+      musicSelection += "Hotline Bling by Drake"
+    END IF
+  else if iq >= 80:
+    intelligenceLevel = "Below Average"
+    IF rock = TRUE THEN
+      musicSelection += "The Final Countdown by Europe"
+      musicSelection += "We Didn’t Start the Fire by Billy Joel"
+    END IF
+    IF pop = TRUE THEN
+      musicSelection += "Party in the U.S.A.” by Miley Cyrus"
+    END IF
+    IF hip-hop = TRUE THEN
+      musicSelection += "Turn Down for What by DJ Snake & Lil Jon"
+    END IF
+  else if iq >= 70:
+    intelligenceLevel = "Borderline"
+    IF rock = TRUE THEN
+      musicSelection += "Party All the Time by Eddie Murphy"
+    END IF
+    IF pop = TRUE THEN
+      musicSelection += "Baby by Justin Bieber"
+    END IF
+    IF hip-hop = TRUE THEN
+      musicSelection += "Face Off by Tech N9ne, Joey Cool, King Iso, Dwayne Johnson"
+    END IF
+  else:
+    intelligenceLevel = "Extremely Low"
+    IF rock = TRUE THEN
+      musicSelection += "The Wheels On The Bus"
+    END IF
+    IF pop = TRUE THEN
+      musicSelection += "Rain, Rain Go Away"
+    END IF
+    IF hip-hop = TRUE THEN
+      musicSelection += "ABCs"
+    END IF
+  END IF
+
+  output += "You have an IQ of " + iq + "." 
+  output += "That means you have " + intelligenceLevel + "."
+  output += "With your love of " + genres + "and your intelligence level, "
+  output += "that suggests that you would like the following songs:"
+  output += musicSelection
+
+  DISPLAY output
+
+END
+
+Test Cases:
+VARIABLES: question 1-10 answers, genres
+
+(with test case 1, for iq formula: Random value = 38.4)
+TEST CASE 1:
+  INPUT VALUES:
+    optionOne(10),
+    optionOne(30),
+    optionOne(0), 
+    optionOne(20),
+    optionOne(5),
+    optionOne(0),
+    optionOne(15),
+    optionOne(10),
+    optionOne(15),
+    optionOne(5),
+    rock
+
+  YOUR EXPECTED RESULT:
+  You have an IQ of 191. That means you have Very Super Mega Big Brain intelligence.
+  With your love of Rock and your intelligence level, that suggests that you would like the following songs:
+
+  Killing in the Name by Rage Against the Machine
+  Bohemian Rhapsody by Queen
+  Something in the Orange by Our Last Night
+
+(with test case 2, for iq formula: Random value = -15.3)
+TEST CASE 2:
+  INPUT VALUES:
+    optionTwo(-10),
+    optionTwo(-10),
+    optionTwo(-5),
+    optionTwo(-20),
+    optionTwo(0),
+    optionTwo(0),
+    optionTwo(-15),
+    optionTwo(-15),
+    optionTwo(-20),
+    optionTwo(0),
+    rock, pop, hip-hop
+
+  YOUR EXPECTED RESULT:
+    You have an IQ of -3. That means you have Extremely Low intelligence.
+    With your love of Rock, Pop, & Hip-Hop and your intelligence level, that suggests that you would like the following songs:
+
+    The Wheels On The Bus
+    Rain, Rain Go Away
+    ABCs
+
+  (with test case 3, for iq formula: Random value = 11.55)
+TEST CASE 3:
+  INPUT VALUES:
+    optionOne(-2.5),
+    optionTwo(-5),
+    optionOne(-2.5),
+    optionTwo(-10),
+    optionOne(2.5),
+    optionTwo(12.5),
+    optionOne(0),
+    optionTwo(0),
+    optionOne(0),
+    optionTwo(5),
+    rock, pop
+
+  YOUR EXPECTED RESULT:
+    You have an IQ of 86. That means you have Below Average intelligence.
+    With your love of Rock, & Pop and your intelligence level, that suggests that you would like the following songs:
+
+    The Final Countdown by Europe
+    We Didn’t Start the Fire by Billy Joel
+    Party in the U.S.A. by Miley Cyrus
+
+(with test case 4, for iq formula: Random value = -10)
+TEST CASE 4:
+  INPUT VALUES:
+    optionOne(-5),
+    optionOne(10),
+    optionTwo(0),
+    optionOne(0),
+    optionTwo(0),
+    optionOne(0),
+    optionTwo(0),
+    optionOne(0),
+    optionTwo(0),
+    optionOne(1),
+    hip-hop
+
+  YOUR EXPECTED RESULT:
+    You have an IQ of 105. That means you have Average intelligence.
+    With your love of hip-hop and your intelligence level, that suggests that you would like the following songs:
+
+    Hotline Bling by Drake
+
+(with test case 5, for iq formula: Random value = -14.5)
+TEST CASE 5:
+  INPUT VALUES:
+    optionTwo(-5),
+    optionOne(14),
+    optionTwo(-5),
+    optionOne(0),
+    optionTwo(5),
+    optionOne(0),
+    optionTwo(-2),
+    optionTwo(0),
+    optionTwo(0),
+    optionTwo(2),
+    rock, pop
+
+  YOUR EXPECTED RESULT:
+    You have an IQ of 111. That means you have High Average intelligence.
+    With your love of Rock & Pop and your intelligence level, that suggests that you would like the following songs:
+
+    Sunshine Of Your Love by Cream
+    Smooth by Santana, Rob Thomas
+    Aja by Steely Dan
+    Blinding Lights by The Weeknd
+    Bad Guy by Billie Eilish
